@@ -58,8 +58,7 @@ class CustomView constructor(context: Context, attrs: AttributeSet? = null, defS
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0) {
         setWillNotDraw(false)
 
-        // said this should go in the CustomView constructor
-        // didn't change java to kotlil
+
         initResources()
 
         paint = Paint().apply {
