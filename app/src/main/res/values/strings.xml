@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MsPaintButWorse</string>
+    <string name="action_erase">erase</string>
+    <string name="action_delete">delete</string>
+    <string name="action_undo">undo</string>
+    <string name="action_brush">draw</string>
+    <string name="action_color">color</string>
+    <string name="action_save">save</string>
 </resources>
