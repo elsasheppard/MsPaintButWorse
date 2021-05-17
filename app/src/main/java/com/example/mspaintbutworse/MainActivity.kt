@@ -13,11 +13,13 @@ class MainActivity : AppCompatActivity() {
 
     private var mtoolbarBottom: Toolbar? = null
     private var mFab: FloatingActionButton? = null
+    private var canvas: CustomView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main) // this was activity_main before in full red
 
+        canvas = findViewById(R.id.canvas_main)
         mtoolbarBottom = findViewById<View>(R.id.toolbar_bottom) as Toolbar
         mtoolbarBottom!!.inflateMenu(R.menu.menu_drawing)
         mtoolbarBottom!!.setOnMenuItemClickListener(Toolbar.OnMenuItemClickListener { item ->
@@ -34,7 +36,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun handleDrawingIconTouched(itemId: Int) {
         when (itemId) {
-
+            R.id.action_brush -> {
+                canvas?.setOnTouchListener { view, motionEvent ->
+                    canvas?.performClick(motionEvent)!!
+                    
+                }
+            }
         }
     }
 

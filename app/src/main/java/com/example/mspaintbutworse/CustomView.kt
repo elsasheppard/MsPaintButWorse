@@ -89,8 +89,6 @@ class CustomView constructor(context: Context, attrs: AttributeSet? = null, defS
         canvas.drawCircle(x, y, size, paint)
 
         canvas.drawRect(rect, paint)
-
-
     }
 */
     }
